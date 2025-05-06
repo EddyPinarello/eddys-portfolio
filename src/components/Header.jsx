@@ -19,7 +19,7 @@ function Header() {
       <nav aria-label="Main Navigation">
         <ul className="navbar-items">
           <li className={currentPath === '/' ? 'active' : ''}>
-            <Link to="/">Eddy's Portfolio</Link>
+            <Link to="/eddys-portfolio">Eddy's Portfolio</Link>
             {currentPath === '/' && <div className="underline"></div>}
           </li>
           <div className={`navbar-pages ${isMobileMenuOpen ? 'mobile-visible' : ''}`}>
