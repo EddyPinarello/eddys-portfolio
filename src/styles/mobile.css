@@ -1,0 +1,213 @@
+@media (max-width: 768px) {
+    .navbar-items {
+        padding: 1em;
+    }
+    
+    .navbar-pages {
+        display: none;
+    }
+    
+    main {
+        padding: 1em;
+    }
+    
+    .hamburger-container {
+        display: block;
+    }
+
+    .hamburger-menu-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+    
+    .hamburger-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10;
+    }
+    
+    .hamburger-line {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    .hamburger-button.open .line-1 {
+        transform: translateY(10px) rotate(45deg);
+    }
+    
+    .hamburger-button.open .line-2 {
+        opacity: 0;
+        }
+    
+    .hamburger-button.open .line-3 {
+        transform: translateY(-10px) rotate(-45deg);
+        }
+    
+    .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        padding: 0.5em;
+        top: 2em;
+        right: 0;
+        height: 9em;
+        width: 14em;
+        border-radius: 6px;
+        background-color: var(--secondary-color);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 5;
+    }
+    
+    .dropdown-menu.mobile-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    .dropdown-menu li {
+        width: max-content;
+    }
+
+    .dropdown-menu li:last-child {
+        width: 100%;
+    }
+    
+    .dropdown-menu li:last-child {
+        border-bottom: none;
+    }
+
+    
+    /* NAVBAR SOCIAL VERTICAL */
+    .vertical-icons {
+        display: none;
+    }
+    
+    .dropdown-menu img {
+        
+        width: 2em;
+        height: 2em;
+        filter: brightness(0) invert(1);
+        transition: transform 0.5s ease;
+    }
+    
+    .dropdown-menu li:last-child {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 1em;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .right-side-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* HOME */
+    .home-presentation {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .circle {
+        width: 15em;
+        height: 15em;
+    }
+
+    /* HomeCard.jsx */
+    .home-card {
+        flex-direction: column;
+    }
+
+    .home-card-image {
+        width: 100%;
+    }
+
+    .home-card-content {
+        width: 100%;
+        padding: 0.5em;
+    }
+
+    /* PROJECTS */
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1em;
+    }
+    
+    /* ProjectCard.jsx */
+    .project-card {
+        width: 19.5em;
+    }
+
+    /* WORKEDUCARD */
+    
+    .timeline-left {
+        width: 3em;
+    }
+    
+    .timeline-container {
+        padding: 0;
+    }
+
+    .timeline-container::before {
+        left: 4em;
+    }
+    .timeline-end {
+        position: absolute;
+        left: 3.6em;
+        bottom: 0;
+        width: 16px;
+        height: 6px;
+        background-color: var(--accent-color);
+        border-radius: 8px;
+        z-index: 1;
+    }
+    
+    .timeline-right {
+        flex: 1;
+        padding-left: 1.8em;
+    }
+
+    .work-edu-card {
+        padding: 1.2em;
+    }
+    .work-edu-card-role {
+        font-size: 1rem;
+    }
+
+    .timeline-date {
+        margin-top: 0.8em;
+        color: white;
+        font-size: 0.7rem;
+    }
+
+    /* CERCHIO */
+    .timeline-circle {
+        left: 4.1em; 
+    }
+
+    
+}

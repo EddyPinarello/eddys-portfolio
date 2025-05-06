@@ -1,0 +1,404 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --background-color: #101010;
+    --font-family: Arial, sans-serif;
+    --text-color: white;
+    --link-hover-color: rgba(231, 163, 100, 0.62);
+    --accent-color: #e75b5b;
+    --secondary-color: #1F1E1E;
+    --tag-color: #171717;
+}
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1, h2, h3, h4, p, a, span {  
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+main {
+    max-width: 1400px;
+    padding: 0.5em 6em;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+h1 {
+    font-size:2em;
+}
+
+
+/* NAVBAR */
+li {
+    list-style: none;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 5em;
+    font-size: 1.2em;
+}
+
+.navbar-pages {
+    display: flex;
+    gap: 3em;
+}
+
+
+.underline {
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 8px;
+    background-color: var(--accent-color);
+    animation: slide-in 0.3s ease forwards;
+    border-radius: 2px;
+}
+
+@keyframes slide-in {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 80%;
+        opacity: 1;
+    }
+}
+
+.hamburger-container {
+    display: none;
+}
+
+
+/* NAVBAR SOCIAL VERTICAL */
+.vertical-icons {
+    position: fixed;
+    top: 50%;
+    left: 1em; 
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    z-index: 1000;
+}
+  
+.vertical-icons img {
+    width: 2em;
+    height: 2em;
+    filter: brightness(0) invert(1);
+    transition: transform 0.5s ease;
+}
+  
+.vertical-icons img:hover {
+    //color: var(--link-hover-color);
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 6em;
+
+}
+
+.right-side-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+/* HOME */
+.home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-presentation {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 3em;
+    padding: 2em;
+    width: 100%;
+    height: 30em;
+}
+
+.circle {
+    width: 20em;
+    height: 20em;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+
+/* HomeCard.js */
+
+.home-cards {
+    margin-top: 2em;
+    width: 100%
+}
+
+.home-cards-title {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+  
+.home-card {
+    margin-bottom: 1em;
+    min-height: 15em;
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+.home-card-image {
+    width: 50%;
+    height: 100%;
+}
+
+.home-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-card-content {
+    padding: 1em;   
+    width: 50%;
+}
+
+.home-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* PROJECTS */
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    place-items: center;
+}
+
+/* ProjectCard.jsx */
+.project-card {
+    height: 30em;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--secondary-color);
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+}
+
+.project-card-image {
+    width: 100%;
+    height: 65%;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-card-content {
+    width: 100%;
+    height: 35%;
+    padding: 1.2em;
+    box-sizing: border-box;
+}
+
+.project-card-content h3 {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.project-card-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7em;
+    margin-top: 1em;
+}
+
+.tag {
+    background-color: var(--tag-color);
+    padding: 0.6em;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.tag span {
+    color: var(--accent-color);
+}
+
+
+.timeline-container {
+    padding: 0 3em;
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    position: relative;
+}
+
+/* TIMELINE ITEM */
+.timeline-item {
+    display: flex;
+    position: relative;
+    margin-bottom: 3em;
+}
+
+.timeline-left {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    width: 10em; 
+    text-align: right;
+    position: relative;
+}
+
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    left: 12.91em; 
+    top: 1em;
+    bottom: 0;
+    width: 3px;
+    background: var(--secondary-color);
+}
+
+/* Little red piece at the end */
+.timeline-end {
+    position: absolute;
+    left: 12.52em;
+    bottom: 0;
+    width: 16px;
+    height: 6px;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+/* date format */
+.timeline-date {
+    margin-top: 0.8em;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* red circle */
+.timeline-circle {
+    position: absolute;
+    left: 10em; 
+    transform: translateX(-50%);
+    top: 1em;
+    width: 13px;
+    height: 13px;
+    background: var(--secondary-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* blinking red circle */
+.current {
+    animation: border-blink 1.5s infinite;
+}
+
+@keyframes border-blink {
+    0%, 100% {
+        border-color: var(--accent-color);
+    }
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* right part of the line */
+.timeline-right {
+    flex: 1;
+    padding-left: 2em;
+}
+
+/* workedu card */
+.work-edu-card {
+    background-color: var(--secondary-color);
+    //width:30em;
+    padding: 1.5em;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.work-edu-card:hover {
+    transform: translateY(-2px);
+}
+
+/* title of the card */
+.work-edu-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.work-edu-card-role {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.work-edu-card-company {
+    font-size: 0.9rem;
+    color: lightgray;
+}
+
+.work-edu-card-description {
+    font-size: 0.95rem;
+    color: white;
+    margin-bottom: 1em;
+    margin-left: 1.1em;
+}
+
+
+.hamburger-menu-container {
+    position: relative;
+    display: none;
+  }
+  
