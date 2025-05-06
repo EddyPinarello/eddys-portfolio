@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/eddys-portfolio/static/css/main.ae9329f8.css",
-    "main.js": "/eddys-portfolio/static/js/main.1ff37175.js",
+    "main.js": "/eddys-portfolio/static/js/main.f346e944.js",
     "static/media/Eddy_Pinarello_resume.pdf": "/eddys-portfolio/static/media/Eddy_Pinarello_resume.dd01db572c4fab5c439b.pdf",
     "static/media/corsaIdealeHome.webp": "/eddys-portfolio/static/media/corsaIdealeHome.11556fb9dca9a7c3e86f.webp",
     "static/media/sensorManagementHome.webp": "/eddys-portfolio/static/media/sensorManagementHome.51c894a3ff2f57edaa8e.webp",
     "index.html": "/eddys-portfolio/index.html",
     "main.ae9329f8.css.map": "/eddys-portfolio/static/css/main.ae9329f8.css.map",
-    "main.1ff37175.js.map": "/eddys-portfolio/static/js/main.1ff37175.js.map"
+    "main.f346e944.js.map": "/eddys-portfolio/static/js/main.f346e944.js.map"
   },
   "entrypoints": [
     "static/css/main.ae9329f8.css",
-    "static/js/main.1ff37175.js"
+    "static/js/main.f346e944.js"
   ]
 }
