@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import cvIcon from '../assets/cv-icon.png';
 import githubIcon from '../assets/github-icon.png';
 import linkedinIcon from '../assets/linkedin-icon.png';
@@ -7,7 +6,7 @@ import AnimatedHamburgerButton from './AnimatedHamburgerButton';
 import resumeDownload from '../assets/resume/Eddy_Pinarello_resume.pdf';
 
 function Header() {
-  const currentPath = window.location.pathname.replace('/eddys-portfolio', '') || '/';
+  const currentPath = window.location.hash.replace('#', '') || '/';
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -19,20 +18,20 @@ function Header() {
       <nav aria-label="Main Navigation">
         <ul className="navbar-items">
           <li className={currentPath === '/' ? 'active' : ''}>
-            <Link to="/eddys-portfolio">Eddy's Portfolio</Link>
+            <a href="#/">Eddy's Portfolio</a>
             {currentPath === '/' && <div className="underline"></div>}
           </li>
           <div className={`navbar-pages ${isMobileMenuOpen ? 'mobile-visible' : ''}`}>
             <li className={currentPath === '/about' ? 'active' : ''}>
-              <Link to="/about">About</Link>
+              <a href="#/about">About</a>
               {currentPath === '/about' && <div className="underline"></div>}
             </li>
             <li className={currentPath === '/projects' ? 'active' : ''}>
-              <Link to="/projects">Projects</Link>
+              <a href="#/projects">Projects</a>
               {currentPath === '/projects' && <div className="underline"></div>}
             </li>
             <li className={currentPath === '/work-experience' ? 'active' : ''}>
-              <Link to="/work-experience">Work Experience</Link>
+              <a href="#/work-experience">Work Experience</a>
               {currentPath === '/work-experience' && <div className="underline"></div>}
             </li>
           </div>
